@@ -258,8 +258,8 @@ nav {
 footer {
   text-align: center;
   padding: 15px 10px;
-  background:white;
-  color:#444;
+  background:linear-gradient(135deg, #111, #333);
+  color:#fff;
   font-size: 0.95em;
   letter-spacing: 0.5px;
   border-top: 1px solid #ddd;
