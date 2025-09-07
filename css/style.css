@@ -9,20 +9,20 @@
 html, body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
-  background: #f4f4f4;
+  background: none;
   color: #333;
   display: flex;
   flex-direction: column;
 }
 body{
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url("image/7.jpg");
+  background-image: url("7.jpg") ;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-attachment: fixed;
+ 
   color: #fff;
+
 }
 
 main {
@@ -222,28 +222,11 @@ nav {
   background: rgba(0,0,0,0.8);
 }
 
-/* Точки-индикатори */
-.indicators {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
 
-.dot {
-  display: inline-block;
-  height: 12px;
-  width: 12px;
-  margin: 0 6px;
-  background-color: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
 
-.dot.active, .dot:hover {
-  background-color: #ff6f61;
-}
+
+
+
 
 /* ==== CONTENT ==== */
 .content {
@@ -302,10 +285,15 @@ footer a:hover::after {
 }
 
 /* ==== CONTACT PAGE ==== */
+body.contact-page{
+  background: url("/image/7.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
 .contact-hero {
   text-align: center;
   padding: 60px 20px 40px;
-  
+
   color: black;
 }
 
@@ -419,7 +407,7 @@ footer a:hover::after {
 .services-section {
   padding: 60px 20px;
   text-align: center;
-  background: #f4f4f4;
+
 }
 
 .services-section h1 {
