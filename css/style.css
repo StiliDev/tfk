@@ -15,7 +15,7 @@ html, body {
   flex-direction: column;
 }
 body{
-  background-image: url("7.jpg") ;
+  background-image: url("/7.jpg") ;
   background-size: cover;
  background-repeat: no-repeat;
  background-position: center;
