@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="service-page">
     <header>
         <nav>
             <a class="logo" href="index.html" > Тодоров Финанс Консултинг ЕООД</a>
@@ -18,11 +18,18 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Начало</a></li>
-                <li><a href="services.html">Услуги</a></li>
+               <li class="dropdown">
+  <a href="#">Услуги</a>
+  <ul class="dropdown-menu">
+    <li><a href="web-services.html">Уеб услуги</a></li>
+    <li><a href="documents.html">Документообработка</a></li>
+    <li><a href="ads.html">Обяви и реклами</a></li>
+  </ul>
+</li>
+                <li><a href="about.html">За нас</a></li>
                 <li>
-                    <a href="contact.html" title="Контакти">
-<i class="fas fa-phone"></i>
-                    </a>
+                    <a href="contact.html" >Контакти</a>
+                     </li>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/people/%25D0%25A2%25D0%25BE%25D0%25B4%25D0%25BE%25D1%2580%25D0%25BE%25D0%25B2-%25D0%25A4%25D0%25B8%25D0%25BD%25D0%25B0%25D0%25BD%25D1%2581-%25D0%259A%25D0%25BE%25D0%25BD%25D1%2581%25D1%2583%25D0%25BB%25D1%2582%25D0%25B8%25D0%25BD%25D0%25B3-%25D0%2595%25D0%259E%25D0%259E%25D0%2594/61575359815691/?sk=about_contact_and_basic_info" target="_blank">
@@ -32,39 +39,35 @@
             </ul>
         </nav>
     </header>
-<body>
-    <main class="service-page">
-    <section class="services-section">
-<h1>Нашите услуги</h1>
-<div class="services-grid">
-<div class="service-card">
-<i class="fas fa-globe service-icon"></i>
-<h2>Уеб услуги</h2>
-<p>Изработка на сайтове и профили в социални мрежи.
-Поддръжка и добавяне на съдържание в сайтове и социални мрежи (нови продукти, услуги, актуални цени, снимки, видеоклипове и т.н.)</p>
 
-</div>
-<div class="service-card">
-<i class="fas fa-file-alt service-icon"></i>
-<h2>Документообработка</h2>
-<p>Създаване, редактиране, обработка, архивиране, дигитализиране, сканиране на документи</p>
-
-</div>
-<div class="service-card">
-<i class="fas fa-bullhorn service-icon"></i>
-<h2>Обяви и реклами</h2>
-<p>Изготвяне и публикуване на обяви и реклами - подбор на персонал, автомобили, недвижими имоти, обучения, продукти, услуги и т.н.</p>
-
-</div>
-</div>
+ <main class="service-page">
+    <section class="service-detail">
+      <div class="service-card-detail">
+        <i class="fas fa-bullhorn service-icon"></i>
+        <h1>Обяви и реклами</h1>
+        <p>
+          Предлагаме изготвяне и публикуване на обяви и реклами. 
+          Осигуряваме пълно съдействие при създаването, дизайна и разпространението 
+          на различни по вид и насоченост рекламни кампании – избор на персонал, обучения, 
+          представяне на продукти и услуги, недвижими имоти, автомобили и др.
+        </p>
+        <p>
+          Можем да съдействаме за постигане на индивидуалните маркетинг цели чрез съчетаване 
+          на професионален опит, модерен дизайн и функционални решения.
+        </p>
+      </div>
     </section>
-</main>
+  </main>
 
-   <footer>
+    <footer>
         <p>&copy; Todorov Finance Consulting LTD</p> 
         <p>Designed by TFC LTD</p>
     </footer>
-    <script>
+
+      <script src="js/js.js"></script>
+   
+ 
+  <script>
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
 

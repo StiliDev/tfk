@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-page">
     <header>
         <nav>
             <a class="logo" href="index.html" > Тодоров Финанс Консултинг ЕООД</a>
@@ -18,11 +18,18 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Начало</a></li>
-                <li><a href="services.html">Услуги</a></li>
+                <li class="dropdown">
+  <a href="#">Услуги</a>
+  <ul class="dropdown-menu">
+    <li><a href="web-services.html">Уеб услуги</a></li>
+    <li><a href="documents.html">Документообработка</a></li>
+    <li><a href="ads.html">Обяви и реклами</a></li>
+  </ul>
+</li>
+                <li><a href="about.html">За нас</a></li>
                 <li>
-                    <a href="contact.html" title="Контакти">
-<i class="fas fa-phone"></i>
-                    </a>
+                    <a href="contact.html" >Контакти</a>
+                     </li>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/people/%25D0%25A2%25D0%25BE%25D0%25B4%25D0%25BE%25D1%2580%25D0%25BE%25D0%25B2-%25D0%25A4%25D0%25B8%25D0%25BD%25D0%25B0%25D0%25BD%25D1%2581-%25D0%259A%25D0%25BE%25D0%25BD%25D1%2581%25D1%2583%25D0%25BB%25D1%2582%25D0%25B8%25D0%25BD%25D0%25B3-%25D0%2595%25D0%259E%25D0%259E%25D0%2594/61575359815691/?sk=about_contact_and_basic_info" target="_blank">
@@ -32,50 +39,50 @@
             </ul>
         </nav>
     </header>
+    <main>
    <div class="carousel">
     <div class="slides">
       <div class="slide">
         <img src="image/1.jpg" alt="Слайд 1">
         <div class="overlay">
-          <h2>Финансови и уеб консултации</h2>
-          <a href="services.html" class="btn">Виж услугите</a>
+          <h2>Функционални уеб услуги</h2>
+      
+          <a href="web-services.html" class="btn">Виж уеб услуги</a>
         </div>
       </div>
      <div class="slide">
         <img src="image/2.jpg" alt="Слайд 1">
         <div class="overlay">
-          <h2>Финансови и уеб консултации</h2>
-          <a href="services.html" class="btn">Виж услугите</a>
+          <h2>Модерни дигитални решения</h2>
+         
+          <a href="documents.html" class="btn">Документообработка</a>
         </div>
       </div>
      <div class="slide">
         <img src="image/3.jpg" alt="Слайд 1">
         <div class="overlay">
-          <h2>Финансови и уеб консултации</h2>
-          <a href="services.html" class="btn">Виж услугите</a>
+           <h2>Реклами и обяви</h2>
+   
+          <a href="ads.html" class="btn">Обяви и реклами</a>
         </div>
       </div>
       <div class="slide">
         <img src="image/4.jpg" alt="Слайд 1">
         <div class="overlay">
-          <h2>Финансови и уеб консултации</h2>
-          <a href="services.html" class="btn">Виж услугите</a>
+          <h2>Професионални консултации</h2>
+         
+          <a href="about.html" class="btn">За нас</a>
         </div>
       </div>
       <div class="slide">
         <img src="image/5.jpg" alt="Слайд 1">
         <div class="overlay">
-          <h2>Финансови и уеб консултации</h2>
-          <a href="services.html" class="btn">Виж услугите</a>
+          <h2>Винаги на разположение</h2>
+       
+          <a href="contact.html" class="btn">Контакти</a>
         </div>
       </div>
-      <div class="slide">
-        <img src="image/6.jpg" alt="Слайд 1">
-        <div class="overlay">
-          <h2>Финансови и уеб консултации</h2>
-          <a href="services.html" class="btn">Виж услугите</a>
-        </div>
-      </div>
+      
     </div>
 
     <!-- стрелки -->
@@ -84,6 +91,38 @@
 
     
   </div>
+</main>
+<section class="intro-section">
+  <div class="intro-card">
+    <h2> Какво правим ние</h2>
+    <p>
+     Превръщаме целите за онлайн представянето Ви във функционални, модерни и практични уеб решения.
+    </p>
+    <p>
+      Предлагаме професионални дигитални методи, средства и решения, адаптирани към специфичните бизнес цели и осигуряващи индивидуална визия, впечатляващо и резултатно онлайн присъствие. 
+      Съчетаваме модерния дизайн с качествен уеб продукт, професионална поддръжка и ефективно управление.
+    </p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <i class="fas fa-globe"></i>
+    <h3>Уеб услуги</h3>
+    <p>Модерен уеб дизайн, поддръжка и цялостни онлайн решения.</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-file-alt"></i>
+    <h3>Документи</h3>
+    <p>Ефективна документообработка и дигитални решения.</p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-bullhorn"></i>
+    <h3>Реклами</h3>
+    <p>Обяви и рекламни кампании за постигане на бизнес цели.</p>
+  </div>
+</section>
+
 
   
 
@@ -92,7 +131,7 @@
         <p>Designed by TFC LTD</p>
     </footer>
 
-      <script src="js/js.js"></script>
+      <script src="js/Java.js"></script>
    
  
   <script>

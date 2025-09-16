@@ -5,9 +5,7 @@ const dots = document.querySelectorAll(".dot");
 let index = 0;
 
 function showSlide(i) {
-  // ако сме извън диапазона, връщаме към началото
-  if (i >= slide.length) index = 0;
-  if (i < 0) index = slide.length - 1;
+  index = (i + slide.length) % slide.length; // нормализираме индекса
 
   slides.style.transform = `translateX(${-index * 100}%)`;
 
