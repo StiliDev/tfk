@@ -8,37 +8,71 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="contact-page">
-    <header>
-        <nav>
-            <a class="logo" href="index.html" > Тодоров Финанс Консултинг ЕООД</a>
-            <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Начало</a></li>
-                <li class="dropdown">
-  <a href="#">Услуги</a>
-  <ul class="dropdown-menu">
-    <li><a href="web-services.html">Уеб услуги</a></li>
-    <li><a href="documents.html">Документообработка</a></li>
-    <li><a href="ads.html">Обяви и реклами</a></li>
-  </ul>
-</li>
-                <li><a href="about.html">За нас</a></li>
-                 <li>
-                    <a href="contact.html" >Контакти</a>
-                     </li>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/people/%25D0%25A2%25D0%25BE%25D0%25B4%25D0%25BE%25D1%2580%25D0%25BE%25D0%25B2-%25D0%25A4%25D0%25B8%25D0%25BD%25D0%25B0%25D0%25BD%25D1%2581-%25D0%259A%25D0%25BE%25D0%25BD%25D1%2581%25D1%2583%25D0%25BB%25D1%2582%25D0%25B8%25D0%25BD%25D0%25B3-%25D0%2595%25D0%259E%25D0%259E%25D0%2594/61575359815691/?sk=about_contact_and_basic_info" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <!-- Лого -->
+      <a class="logo" href="index.html">Тодоров Финанс Консултинг ЕООД</a>
+
+      <!-- hamburger бутон -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Десктоп меню -->
+      <ul class="nav-links">
+        <li><a href="index.html">Начало</a></li>
+        <li class="dropdown">
+          <a href="#">Услуги</a>
+          <ul class="dropdown-menu">
+            <li><a href="web-services.html">Уеб услуги</a></li>
+            <li><a href="documents.html">Документообработка</a></li>
+            <li><a href="ads.html">Обяви и реклами</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">За нас</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+        <li>
+          <a
+            href="https://www.facebook.com/people/%25D0%25A2%25D0%25BE%25D0%25B4%25D0%25BE%25D1%2580%25D0%25BE%25B2-%25D0%25A4%25D0%25B8%25D0%25BD%25D0%25B0%25D0%25BD%25D1%2581-%25D0%259A%25D0%25BE%25D0%25BD%25D1%2581%25D1%2583%25D0%25BB%25D1%2582%25D0%25B8%25D0%25BD%25D0%25B3-%25D0%2595%25D0%259E%25D0%259E%25D0%2594/61575359815691/?sk=about_contact_and_basic_info"
+            target="_blank"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SIDE MENU (само мобилни) -->
+  <div class="side-menu" id="sideMenu">
+    <button class="close-btn">&times;</button>
+    <ul>
+      <li><a href="index.html">Начало</a></li>
+      <li class="has-submenu">
+        <a href="#">Услуги</a>
+        <ul class="submenu">
+          <li><a href="web-services.html">Уеб услуги</a></li>
+          <li><a href="documents.html">Документообработка</a></li>
+          <li><a href="ads.html">Обяви и реклами</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+      <li>
+        <a
+          href="https://www.facebook.com/people/%25D0%25A2%25D0%25BE%25D0%25B4%25D0%25BE%25D1%2580%25D0%25BE%25B2-%25D0%25A4%25D0%25B8%25D0%25BD%25D0%25B0%25D0%25BD%25D1%2581-%25D0%259A%25D0%25BE%25D0%25BD%25D1%2581%25D1%2583%25D0%25BB%25D1%2582%25D0%25B8%25D0%25BD%25D0%25B3-%25D0%2595%25D0%259E%25D0%259E%25D0%2594/61575359815691/?sk=about_contact_and_basic_info"
+          target="_blank"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
 
   <main class="contact-page">
   <section class="contact-hero">
@@ -87,12 +121,36 @@
         <p>Designed by TFC LTD</p>
     </footer>
 
-  <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+ <script>
+  const hamburger = document.querySelector(".hamburger");
+  const sideMenu = document.getElementById("sideMenu");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.querySelector(".side-menu .close-btn");
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+  // Отваряне на менюто
+  hamburger.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  // Затваряне с Х бутона
+  closeBtn.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  // Затваряне при клик върху overlay
+  overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  // Dropdown функционалност
+  document.querySelectorAll(".has-submenu > a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      link.parentElement.classList.toggle("open");
+    });
   });
 </script>
 </body>

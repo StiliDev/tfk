@@ -16,9 +16,12 @@ html, body {
 }
 
 
+
 main {
   flex: auto; /* избутва футъра долу */
 }
+
+
 
 /* ==== НАВИГАЦИЯ ==== */
 nav {
@@ -34,7 +37,7 @@ nav {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-  /* hamburger бутон */
+/* hamburger бутон */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -48,35 +51,13 @@ nav {
   background: #fff;
   border-radius: 2px;
 }
+
+/* Десктоп меню */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
 }
-
-/* responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #222;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 200px;
-    padding: 20px;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
 
 .logo {
   font-size: 1.6em;
@@ -85,18 +66,20 @@ nav {
   text-decoration: none;
 }
 
-
-
-.nav-links a {
+/* Линкове - еднакви стилове за десктоп и мобилно */
+.nav-links a,
+.side-menu a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
   padding: 8px 0;
   position: relative;
   transition: color 0.3s;
+  display: inline-block;
 }
 
-.nav-links a::after {
+.nav-links a::after,
+.side-menu a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -107,17 +90,96 @@ nav {
   transition: width 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.side-menu a:hover {
   color: #ff9472;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.side-menu a:hover::after {
   width: 100%;
 }
 
-.nav-links i {
+.nav-links i,
+.side-menu i {
   font-size: 1.2em;
 }
+
+/* ==== SIDE MENU (мобилно) ==== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #222;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 2000;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-menu .submenu {
+  margin-left: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.side-menu .has-submenu.open .submenu {
+  display: flex;
+}
+
+/* бутон за затваряне */
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 1500;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* скриваме десктоп менюто */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
 
 
 /* ==== HERO / КАРОСЕЛ ==== */
@@ -155,7 +217,7 @@ nav {
   pointer-events: none;
 }
 
-.overlay {
+.carousel-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -168,7 +230,7 @@ nav {
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-.overlay h2 {
+.carousel-overlay h2 {
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   margin-bottom: 15px;
   font-weight: 700;
@@ -476,7 +538,7 @@ body.service-page{
 }
 
 .service-icon {
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: #ff6f61;
   margin-bottom: 20px;
 }
@@ -642,6 +704,7 @@ body.about-page {
   align-items: center;
   min-height: 70vh;
   padding: 40px 20px;
+
 }
 
 .service-card-detail {
