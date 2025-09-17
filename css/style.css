@@ -708,6 +708,7 @@ body.about-page {
 }
 
 .service-card-detail {
+  width: 100%;
   max-width: 900px;
   background: rgba(255, 255, 255, 0.9);
   padding: 40px;
@@ -715,6 +716,9 @@ body.about-page {
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   text-align: center;
   animation: fadeInUp 0.8s ease;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .service-card-detail h1 {
