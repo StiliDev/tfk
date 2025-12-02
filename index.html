@@ -69,6 +69,7 @@
         </a>
       </li>
     </ul>
+     <img src="image/project-info.png.png" class="eu-corner-mobile mobile-only popup-trigger"alt="Проект BG05SFPR002">
   </div>
 
   <!-- Overlay -->
@@ -163,9 +164,16 @@
   
 
      <footer>
+      <div class="footer-left">
+  <img src="image/project-info.png.png" class="eu-corner desktop-only popup-trigger" alt="EU Project">
+</div>
         <p>&copy; Todorov Finance Consulting LTD</p> 
         <p>Designed by TFC LTD</p>
     </footer>
+     <div id="imagePopup" class="popup-overlay">
+    <span class="close-popup">&times;</span>
+    <img id="popupImg" class="popup-img">
+</div>
 
       <script src="js/Java.js"></script>
    
@@ -204,6 +212,34 @@
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("imagePopup");
+    const popupImg = document.getElementById("popupImg");
+    const triggers = document.querySelectorAll(".popup-trigger");
+    const closeBtn = document.querySelector(".close-popup");
+
+    // Клик върху малката картинка → отваря popup
+    triggers.forEach(img => {
+        img.addEventListener("click", () => {
+            popupImg.src = img.src;
+            popup.style.display = "flex";
+        });
+    });
+
+    // Затваряне при X
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+    // Затваряне при клик извън изображението
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.style.display = "none";
+        }
+    });
+});
+</script>
 
 </body>
 </html>
